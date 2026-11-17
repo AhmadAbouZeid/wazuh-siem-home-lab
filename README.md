@@ -22,8 +22,8 @@ A hands-on home lab where I deployed the Wazuh SIEM, connected an endpoint, and 
 
 ```
   Kali Linux VM (attacker + Wazuh agent)          Ubuntu Server
-  eth0  192.168.30.130  (host-only)  ───────────► 192.168.30.129  (host-only)
-  eth1  192.168.31.132  (NAT, updates only)       Wazuh manager + indexer
+  host-only adapter  192.168.30.x  (host-only)  ───────────► 192.168.30.129  (host-only)
+  NAT adapter  192.168.31.x  (NAT, updates only)       Wazuh manager + indexer
                                                   + dashboard + Apache
 ```
 Addresses come from DHCP, and Kali’s adapter names (eth0/eth1) can swap between boots, so the NetworkManager profiles are bound to MAC addresses.
