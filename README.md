@@ -1,6 +1,6 @@
 # Wazuh SIEM Home Lab
 
-A hands-on home lab where I deployed the Wazuh SIEM, connected an endpoint, and practiced the core SOC workflow: collecting logs, triaging alerts, writing custom detection rules, and automating a response.
+A hands-on home lab where I deployed the Wazuh SIEM, connected an endpoint, and practiced the core SOC workflow: collecting logs, triaging alerts, writing custom detection rules, automating a response, and finding and fixing vulnerabilities with Nessus.
 
 **Author:** Ahmad Abou-Zeid, Computer Science graduate (Lebanese University), focused on SOC / security analyst roles.
 
@@ -13,6 +13,7 @@ A hands-on home lab where I deployed the Wazuh SIEM, connected an endpoint, and 
 | Hypervisor | VMware Workstation (host: 16 GB RAM laptop) |
 | SIEM server | Ubuntu Server 26.04 LTS, 8 GB RAM, Wazuh 4.14.9 (all-in-one: manager, indexer, dashboard) |
 | Endpoint / attacker | Kali Linux VM with the Wazuh agent installed |
+| Vulnerability scanner | Tenable Nessus Essentials on the Kali VM |
 
 | Network | Addresses |
 |---|---|
@@ -38,6 +39,7 @@ Attack simulations were run only against my own lab machines.
 | 2 | [Active response: automatic IP blocking](02-active-response.md) | Wazuh active response, firewall-drop, timeouts, testing |
 | 3 | [File integrity monitoring](03-file-integrity-monitoring.md) | FIM (syscheck), real-time monitoring, file change alerts |
 | 4 | [Web attack detection in Apache logs](04-web-attack-detection.md) | Log ingestion, rule chaining, `wazuh-logtest`, MITRE ATT&CK mapping |
+| 5 | [Vulnerability scanning and remediation (Nessus)](05-vulnerability-management-nessus.md) | Uncredentialed vs credentialed scanning, triage, root cause, TLS hardening, verification rescan, SIEM correlation |
 
 ---
 
@@ -82,4 +84,4 @@ Attack simulations were run only against my own lab machines.
 
 ## Skills demonstrated
 
-SIEM deployment (Wazuh) · Endpoint log forwarding · Alert triage · Custom detection rules (XML) · Active response · File integrity monitoring · Web log analysis · Linux administration · Network troubleshooting (routing, NetworkManager) · MITRE ATT&CK mapping
+SIEM deployment (Wazuh) · Endpoint log forwarding · Alert triage · Custom detection rules (XML) · Active response · File integrity monitoring · Web log analysis · Vulnerability scanning (Nessus) · TLS hardening · Linux administration · Network troubleshooting (routing, NetworkManager) · MITRE ATT&CK mapping
